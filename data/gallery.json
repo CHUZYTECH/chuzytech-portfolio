@@ -6,12 +6,6 @@
     "category": "App"
   },
   {
-    "image": "images/digital_book_cover1.jpg",
-    "title": "AMAZON DIGITAL BOOK COVER",
-    "alt": "AMAZON DIGITAL BOOK COVER",
-    "category": "Branding"
-  },
-  {
     "image": "images/chuzytech_logo001.jpg",
     "title": "CHUZYTECH",
     "alt": "CHUZYTECH",
@@ -108,6 +102,18 @@
     "category": "Construction"
   },
   {
+    "image": "images/holy_pastor.jpg",
+    "title": "HOLY PASTOR COMMUNICATION",
+    "alt": "HOLY PASTOR COMMUNICATION",
+    "category": "Branding"
+  },
+  {
+    "image": "images/emmy_best.jpg",
+    "title": "EMMY BEST ELECTRICAL SOLUTION",
+    "alt": "EMMY BEST ELECTRICAL SOLUTION",
+    "category": "Branding"
+  },
+  {
     "image": "images/bishopchuks_technology.jpg",
     "title": "BishopChuks Technology",
     "alt": "BishopChuks Technology",
@@ -126,6 +132,18 @@
     "category": "Branding"
   },
   {
+    "image": "images/naau.jpg",
+    "title": "NAAU LOGO",
+    "alt": "NAAU LOGO",
+    "category": "Branding"
+  },
+  {
+    "image": "images/nkalu_united_fc.jpg",
+    "title": "NKALU UNITED FC",
+    "alt": "NKALU UNITED FC",
+    "category": "Branding"
+  },
+  {
     "image": "images/digital_book_cover3.jpg",
     "title": "ONLINE DIGITAL BOOK COVER",
     "alt": "ONLINE DIGITAL BOOK",
@@ -138,15 +156,9 @@
     "category": "Branding"
   },
   {
-    "image": "images/holy_pastor.jpg",
-    "title": "HOLY PASTOR COMMUNICATION",
-    "alt": "HOLY PASTOR COMMUNICATION",
-    "category": "Branding"
-  },
-  {
-    "image": "images/emmy_best.jpg",
-    "title": "EMMY BEST ELECTRICAL SOLUTION",
-    "alt": "EMMY BEST ELECTRICAL SOLUTION",
+    "image": "images/digital_book_cover1.jpg",
+    "title": "AMAZON DIGITAL BOOK COVER",
+    "alt": "AMAZON DIGITAL BOOK COVER",
     "category": "Branding"
   },
   {
@@ -192,27 +204,9 @@
     "category": "Branding"
   },
   {
-    "image": "images/viva_altiler_logo.jpg",
+    "image": "images/viva_ateliers_logo.jpg",
     "title": "VIVA ALTELIER",
     "alt": "VIVA ALTELIER",
-    "category": "Branding"
-  },
-  {
-    "image": "images/viva.jpg",
-    "title": "VIVA ALTELIER LOGO",
-    "alt": "VIVA ALTELIER LOGO",
-    "category": "Branding"
-  },
-  {
-    "image": "images/naau.jpg",
-    "title": "NAAU LOGO",
-    "alt": "NAAU LOGO",
-    "category": "Branding"
-  },
-  {
-    "image": "images/nkalu_united_fc.jpg",
-    "title": "NKALU UNITED FC",
-    "alt": "NKALU UNITED FC",
     "category": "Branding"
   },
   {
