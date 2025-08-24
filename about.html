@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - CHUZYTECH</title>
+  <!-- Meta -->
+  <meta name="description" content="Learn more about CHUZYTECH and the team behind our creative solutions." />
+  <meta name="author" content="Oko Samuel Ogbonnia" />
+  <!-- Fonts and Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <!-- Social Media Icons link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Orbitron font for Projects -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/chuzytech_logo.png" alt="CHUZYTECH Logo" style="height: 40px; margin-right: 10px;">
+      </a>
+
+      <!-- ✅ Custom Toggler with Hamburger Icon -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-icon">&#9776;</span> <!-- ☰ icon -->
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+              <li><a class="dropdown-item" href="reviews.html">Review</a></li>
+              <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navCollapse = document.getElementById('navbarNav');
+      const body = document.body;
+      const togglerIcon = document.querySelector('.toggler-icon');
+
+      navCollapse.addEventListener('shown.bs.collapse', function () {
+        // Push content down
+        const expandedHeight = document.querySelector('.navbar').offsetHeight;
+        document.documentElement.style.setProperty('--navbar-expanded-height', expandedHeight + 'px');
+        body.classList.add('nav-open');
+
+        // Change icon to cancel ✖
+        if (togglerIcon) togglerIcon.innerHTML = '✖';
+      });
+
+      navCollapse.addEventListener('hidden.bs.collapse', function () {
+        body.classList.remove('nav-open');
+
+        // Change icon back to hamburger ☰
+        if (togglerIcon) togglerIcon.innerHTML = '&#9776;';
+      });
+    });
+  </script>
+
+  <!-- About Section -->
+  <section class="hero-section m-auto position-relative overflow-hidden">
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100 position-relative text-center mt-5">
+
+      <!-- Content Box -->
+      <div class="floating-glass animate__animated animate__fadeInUp mb-0">
+        <h1 class="fw-bold text-info mb-3">About Me</h1>
+        <p class="lead fst-italic text-light">
+          I am passionate about delivering top-notch digital solutions with
+          a focus on design, development, and creativity. I am
+          dedicated to turning your ideas into reality and creating
+          exceptional user experiences!
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="section container text-center">
+    <h2 class="section-title">Learn More About Me!</h2>
+
+    <div class="row align-items-stretch">
+      <!-- Profile Image Section -->
+      <div class="col-md-4 d-flex">
+        <div
+          class="profile-image about-content mission-card flex-fill d-flex align-items-center justify-content-center">
+          <img src="images/chuzypic.png" alt="Oko Samuel Ogbonnia" class="img-fluid rounded shadow" />
+          <style>
+            .profile-image img {
+              border: 3px solid #f0f0f0;
+              /* light neutral */
+              border-radius: 12px;
+              /* keeps it soft */
+            }
+          </style>
+        </div>
+      </div>
+
+      <!-- About Me Content Section -->
+      <div class="col-md-8 d-flex">
+        <div class="about-content p-5 mission-card flex-fill d-flex flex-column justify-content-center">
+          <h3 class="fw-bold">Oko Samuel Ogbonnia</h3>
+          <p class="text-info fst-italic small">
+            Software Developer • UI/UX Designer • Founder of CHUZYTECH
+          </p>
+          <p>
+            I’m the Founder and CEO of <strong>CHUZYTECH</strong>,
+            originally from Afikpo North, Ebonyi State, Nigeria. I hold a
+            degree in
+            Computer Science from Michael Okpara University of Agriculture,
+            Umudike,
+            and I’m currently studying Software Development at BYU - Idaho.
+          </p>
+          <p>
+            At CHUZYTECH, I combine my passion for technology and design with
+            years of experience in web development, UI/UX design, WordPress
+            design,
+            graphic design, and content writing. My goal is to transform your
+            ideas
+            into effective, engaging, and user-focused digital solutions that
+            stand out
+            and deliver results.
+          </p>
+          <p><em>Let’s work together to bring your digital vision to
+              life.</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education-section py-5 text-white container">
+    <div class="container">
+      <h3 class="mb-4 text-center section-title">
+        <i class="fas fa-graduation-cap me-2"></i>Education Background!
+      </h3>
+      <div class="row">
+        <!-- Current School -->
+        <div class="col-md-6 mb-4">
+          <div class="p-4 border-1 about-content mission-card">
+            <h5>
+              <i class="fas fa-university me-2 text-primary"></i>Brigham Young
+              University - Idaho
+            </h5>
+            <p class="mb-1"><strong>Department:</strong> Software
+              Development</p>
+            <p class="text-info mb-2">Currently Enrolled</p>
+            <h5>
+              <i class="fas fa-university me-2 text-danger"></i>
+              Launching Leaders Worldwide
+            </h5>
+            <p>CSCI Launching Leaders</p>
+            <p class="text-success mb-0">Graduated</p>
+          </div>
+        </div>
+
+        <!-- Previous Schools -->
+        <div class="col-md-6 mb-4">
+          <div class="p-4 about-content mission-card">
+            <h5>
+              <i class="fas fa-university me-2 text-warning"></i>BYU -
+              PathwayConnect Worldwide
+            </h5>
+            <p class="text-success mb-2">Graduated</p>
+            <h5>
+              <i class="fas fa-university me-2 text-info"></i>Michael Okpara
+              University of Agriculture, Umudike.
+            </h5>
+            <p><strong>BSc</strong> in Computer Science</p>
+            <p class="text-success mb-0">Graduated</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Download Section -->
+      <div class="text-center">
+        <a href="portfolio.html" class="btn btn-info mt-3 text-black link-light px-4 py-2 rounded-pill shadow-sm"
+          style="transition: all 0.3s ease; transform: scale(1);"
+          onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.2)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)';">
+          View My Portfolio
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark">
+    <p class="text-center lead">Follow Me</p>
+    <div class="social-icons mb-2">
+      <a href="https://www.facebook.com/ObomeChuzy/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/oko-samuel-ogbonnia-7a8754265/" target="_blank"><i
+          class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/+23408061163089" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://x.com/ObomeChuzy" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/ObomeChuzy/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:chuzytech@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+      <a href="https://t.me/ObomeChuzy" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
+    <p>&copy; <span id="year"></span> CHUZYTECH. All rights reserved.</p>
+    <p id="local-date" class="text-center"></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap min -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main2.js"></script>
+
+</body>
+
+</html>

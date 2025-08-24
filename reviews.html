@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Reviews | CHUZYTECH</title>
+    <!-- Meta -->
+    <meta name="description" content="Client testimonials about CHUZYTECH's services." />
+    <meta name="author" content="Oko Samuel Ogbonnia" />
+    <!-- Fonts and Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Admin Icon CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #f5f5f5;
+            padding-top: 70px;
+        }
+
+        .star {
+            color: gold;
+            font-size: 1.2rem;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        textarea,
+        input,
+        .form-select {
+            background-color: #2b2b2b !important;
+            color: #fff !important;
+            border: 1px solid #555 !important;
+            border-radius: 0.5rem;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            background: #333;
+            color: #fff;
+            border-color: #0dcaf0;
+            box-shadow: none;
+        }
+
+        ::placeholder {
+            color: #ccc !important;
+        }
+
+        .btn-custom {
+            background: #0dcaf0;
+            border: none;
+            border-radius: 2rem;
+            color: black;
+            font-weight: 600;
+        }
+
+        .btn-custom:hover {
+            background: #1fd4ff;
+            transform: translateY(-2px);
+        }
+
+        table {
+            color: #fff;
+        }
+
+        thead {
+            background-color: #0dcaf0;
+            color: #000;
+        }
+
+        .navbar .admin-icon,
+        .navbar .admin-icon * {
+            pointer-events: auto;
+        }
+
+        .navbar .admin-icon:hover {
+            color: inherit !important;
+            background: none !important;
+            transform: none !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body style="font-family: 'Poppins', sans-serif; background: hsl(0, 0%, 7%);"></body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="#">
+                <img src="images/chuzytech_logo.png" alt="CHUZYTECH Logo" style="height: 40px; margin-right: 10px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="toggler-icon">&#9776;</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Review</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0 admin-icon" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-person-circle" style="font-size: 1.2rem; color: #0dcaf0;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navCollapse = document.getElementById('navbarNav');
+            const body = document.body;
+            const togglerIcon = document.querySelector('.toggler-icon');
+
+            navCollapse.addEventListener('shown.bs.collapse', function () {
+                const expandedHeight = document.querySelector('.navbar').offsetHeight;
+                document.documentElement.style.setProperty('--navbar-expanded-height', expandedHeight + 'px');
+                body.classList.add('nav-open');
+                if (togglerIcon) togglerIcon.innerHTML = '✖';
+            });
+
+            navCollapse.addEventListener('hidden.bs.collapse', function () {
+                body.classList.remove('nav-open');
+                if (togglerIcon) togglerIcon.innerHTML = '&#9776;';
+            });
+        });
+    </script>
+
+    <!-- Review Section -->
+    <section class="hero-section m-auto position-relative overflow-hidden">
+        <div
+            class="container d-flex justify-content-center align-items-center min-vh-100 position-relative text-center mt-5">
+            <div class="floating-glass animate__animated animate__fadeInUp rounded-4">
+                <h1 class="fw-bold text-info">What Our Clients Say</h1>
+                <p class="lead fst-italic text-light">
+                    Real stories. Real results. See how CHUZYTECH has
+                    transformed ideas into impactful digital
+                    experiences for our clients worldwide.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="review-section container py-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold section-title text-light">Client
+                Testimonials</h2>
+            <p class="text-light fst-italic">Honest feedback from brands and
+                individuals who’ve trusted CHUZYTECH to
+                bring their visions to life.</p>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-info">Admin Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="adminUser" class="form-control mb-3" placeholder="Username">
+                    <input type="password" id="adminPass" class="form-control mb-3" placeholder="Password">
+                    <p id="loginError" class="text-danger d-none">Invalid
+                        Credentials!</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button class="btn btn-custom" onclick="loginAdmin()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Form -->
+    <div class="container my-5" style="max-width: 900px;" id="reviewSection">
+        <div class="card p-4 shadow mb-4">
+            <h3 class="text-center mb-4 text-info">Submit Your Review</h3>
+            <input id="clientName" type="text" class="form-control mb-3" placeholder="Your Name">
+            <input id="clientEmail" type="email" class="form-control mb-3" placeholder="Your Email">
+            <textarea id="clientReview" class="form-control mb-3" placeholder="Your Review"></textarea>
+            <select id="clientRating" class="form-select mb-4">
+                <option value>Select Rating</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+            <button class="btn btn-info w-100 btn-lg rounded-pill text-black link-light px-4 py-2 shadow-sm"
+                style="transition: all 0.3s ease; transform: scale(1);"
+                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.2)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)';"
+                onclick="submitReview()">
+                Submit Review
+            </button>
+
+        </div>
+        <h4 class="text-center mt-5 section-title text-light">What Our
+            Clients Say</h4>
+        <div id="allReviews" class="row g-4 mt-4"></div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="container my-5 d-none" id="adminSection">
+        <div class="card p-4 shadow mb-4">
+            <h3 class="text-center mb-4 text-info">Admin Review Panel</h3>
+            <div class="table-responsive">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Review</th>
+                            <th>Rating</th>
+                            <th>Date</th>
+                            <th>Reply</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminTableBody"></tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+                <button class="btn btn-success" onclick="exportBackup()">Export Backup</button>
+                <input type="file" id="importFile" hidden onchange="importBackup()">
+                <button class="btn btn-warning" onclick="document.getElementById('importFile').click()">Import
+                    Backup</button>
+                <!-- Exit button added here -->
+                <button class="btn btn-danger" onclick="exitAdmin()">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content text-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input id="editName" type="text" class="form-control mb-2" placeholder="Name">
+                    <input id="editEmail" type="email" class="form-control mb-2" placeholder="Email">
+                    <textarea id="editReview" class="form-control mb-2" placeholder="Review"></textarea>
+                    <label>Rating:</label>
+                    <select id="editRating" class="form-select mb-2">
+                        <option value="1">⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                    </select>
+                    <textarea id="editReply" class="form-control"
+                        placeholder="Admin Reply (hidden from public)"></textarea>
+                    <input type="hidden" id="editIndex">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="saveEdit()">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const STORAGE_KEY = 'chuzytech_reviews';
+        const ADMIN_USER = 'admin';
+        const ADMIN_PASS = 'chuzytech@61163089';
+        const editModal = new bootstrap.Modal(document.getElementById('editModal'));
+
+        function submitReview() {
+            const name = clientName.value.trim();
+            const email = clientEmail.value.trim();
+            const review = clientReview.value.trim();
+            const rating = parseInt(clientRating.value);
+            if (!name || !email || !review || isNaN(rating)) { alert("All fields are required!"); return; }
+            const now = new Date();
+            const datetime = now.toLocaleDateString() + ", " + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            const reviews = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            reviews.unshift({ name, email, review, rating, datetime, reply: "" });
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
+            loadReviews();
+            clientName.value = ""; clientEmail.value = ""; clientReview.value = ""; clientRating.value = "";
+        }
+
+        function loadReviews() {
+            const reviews = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            allReviews.innerHTML = "";
+            adminTableBody.innerHTML = "";
+            reviews.forEach((r, i) => {
+                let stars = "⭐".repeat(r.rating);
+                allReviews.innerHTML += `
+      <div class="col-md-4">
+        <div class="card p-3 h-100 shadow">
+          <h5>${r.name}</h5>
+          <p>${r.review}</p>
+          <p class="mb-1 text-info">${r.email}</p>
+          <div>${stars}</div>
+          <small class="text-secondary">Submitted on: ${r.datetime}</small>
+        </div>
+      </div>`;
+                adminTableBody.innerHTML += `
+      <tr>
+        <td>${r.name}</td>
+        <td>${r.email}</td>
+        <td>${r.review}</td>
+        <td>${stars}</td>
+        <td>${r.datetime}</td>
+        <td>${r.reply || ""}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" onclick="openEdit(${i})">Edit</button>
+          <button class="btn btn-sm btn-danger" onclick="deleteReview(${i})">Delete</button>
+        </td>
+      </tr>`;
+            });
+        }
+
+        function deleteReview(i) {
+            if (confirm("Delete this review?")) {
+                let reviews = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+                reviews.splice(i, 1);
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
+                loadReviews();
+            }
+        }
+
+        function openEdit(i) {
+            const r = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            const review = r[i];
+            editName.value = review.name;
+            editEmail.value = review.email;
+            editReview.value = review.review;
+            editRating.value = review.rating;
+            editReply.value = review.reply || "";
+            editIndex.value = i;
+            editModal.show();
+        }
+
+        function saveEdit() {
+            const i = editIndex.value;
+            let reviews = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            reviews[i] = {
+                name: editName.value,
+                email: editEmail.value,
+                review: editReview.value,
+                rating: parseInt(editRating.value),
+                datetime: reviews[i].datetime,
+                reply: editReply.value
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
+            editModal.hide();
+            loadReviews();
+        }
+
+        function exportBackup() {
+            const data = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'chuzytech_reviews_backup.json';
+            a.click();
+        }
+
+        function importBackup() {
+            const file = importFile.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = e => {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(importedData));
+                    loadReviews();
+                    alert("Import successful.");
+                } catch {
+                    alert("Invalid file format.");
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function loginAdmin() {
+            if (adminUser.value.trim() === ADMIN_USER && adminPass.value.trim() === ADMIN_PASS) {
+                reviewSection.classList.add("d-none");
+                adminSection.classList.remove("d-none");
+                loadReviews();
+                bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
+            } else {
+                loginError.classList.remove("d-none");
+            }
+        }
+
+        function exitAdmin() {
+            adminSection.classList.add("d-none");
+            reviewSection.classList.remove("d-none");
+            adminUser.value = "";
+            adminPass.value = "";
+            loginError.classList.add("d-none");
+        }
+
+        loadReviews();
+    </script>
+
+    <!-- Toast Notifications -->
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1055">
+        <!-- Admin Login Success Toast -->
+        <div id="loginToast" class="toast align-items-center text-bg-success border-0 shadow slide-in" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-semibold">
+                    ✅ Admin login successful. Welcome back!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+
+        <!-- Review Submitted Toast -->
+        <div id="reviewToast" class="toast align-items-center text-bg-info border-0 shadow slide-in" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-semibold">
+                    Your review has been submitted successfully!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+
+        <!-- Error Toast -->
+        <div id="errorToast" class="toast align-items-center text-bg-danger border-0 shadow slide-in" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-semibold" id="errorToastMsg">
+                    ❌ Something went wrong!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* ✅ Slide-in Animation for Toasts */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(120%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .toast.slide-in.show {
+            animation: slideInRight 0.6s ease forwards;
+        }
+    </style>
+
+    <script>
+        function showToast(id, message = null) {
+            const toastEl = document.getElementById(id);
+            if (message) {
+                const bodyEl = toastEl.querySelector(".toast-body");
+                if (bodyEl) bodyEl.innerText = message;
+            }
+            const toast = new bootstrap.Toast(toastEl, { delay: 3000 });
+            toast.show();
+        }
+
+        // ✅ Review Submit
+        function submitReview() {
+            const name = clientName.value.trim();
+            const email = clientEmail.value.trim();
+            const review = clientReview.value.trim();
+            const rating = parseInt(clientRating.value);
+
+            if (!name || !email || !review || isNaN(rating)) {
+                showToast("errorToast", "❌ Please fill in all fields before submitting.");
+                return;
+            }
+
+            const now = new Date();
+            const datetime = now.toLocaleDateString() + ", " + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            const reviews = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            reviews.unshift({ name, email, review, rating, datetime, reply: "" });
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
+            loadReviews();
+
+            clientName.value = ""; clientEmail.value = ""; clientReview.value = ""; clientRating.value = "";
+
+            // 🎉 Success Toast
+            showToast("reviewToast");
+        }
+
+        // ✅ Admin Login
+        function loginAdmin() {
+            if (adminUser.value.trim() === ADMIN_USER && adminPass.value.trim() === ADMIN_PASS) {
+                reviewSection.classList.add("d-none");
+                adminSection.classList.remove("d-none");
+                loadReviews();
+                bootstrap.Modal.getInstance(document.getElementById("loginModal")).hide();
+
+                // ✅ Success Toast
+                showToast("loginToast");
+            } else {
+                showToast("errorToast", "❌ Invalid admin credentials!");
+            }
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark">
+        <p class="text-center lead">Follow Me</p>
+        <div class="social-icons mb-2">
+            <a href="https://www.facebook.com/ObomeChuzy/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/oko-samuel-ogbonnia-7a8754265/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/+23408061163089" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://x.com/ObomeChuzy" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/ObomeChuzy/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:chuzytech@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            <a href="https://t.me/ObomeChuzy" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+        <p>&copy; <span id="year"></span> CHUZYTECH. All rights reserved.</p>
+        <p id="local-date" class="text-center"></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main2.js"></script>
+
+</body>
+
+</html>

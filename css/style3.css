@@ -1,0 +1,124 @@
+
+/* Masonry layout: 3 per row on desktop */
+.masonry-grid {
+  column-count: 3;
+  column-gap: 1.25rem;
+}
+@media (max-width: 992px) {
+  .masonry-grid { column-count: 2; }
+}
+@media (max-width: 576px) {
+  .masonry-grid { column-count: 1; }
+}
+
+
+/* Card style */
+.gallery-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform .6s cubic-bezier(.16,.8,.43,1), opacity .6s ease;
+}
+
+/* Scroll fade-in animation */
+.gallery-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Image styling */
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .8s cubic-bezier(.19,1,.22,1);
+}
+
+/* Hover zoom effect */
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Caption overlay */
+.gallery-meta {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.75) 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transform: translateY(100%);
+  transition: transform .4s ease;
+}
+
+/* Slide-up caption on hover */
+.gallery-card:hover .gallery-meta {
+  transform: translateY(0);
+}
+
+/* Accessibility focus outline */
+.gallery-card:focus-within,
+.gallery-card a:focus-visible {
+  outline: 3px solid #0dcaf0;
+  outline-offset: 3px;
+}
+
+.gallery-section {
+  max-width: 800px;
+  margin: 0 auto; /* Centers it horizontally */
+}
+
+.gallery-section.container {
+  max-width: 800px;
+}
+
+
+
+
+/* Animate Title */
+.animationz-title {
+  opacity: 0;
+  /* Start hidden */
+  animation: fadeSlideIn 1.2s ease-out forwards, glowEffect 2s infinite alternate;
+  animation-delay: 0.6s;
+  /* Start after 0.6s */
+}
+
+/* Animate Subtitle */
+.animationz-subtitle {
+  opacity: 0;
+  /* Start hidden */
+  animation: fadeInUp 1.2s ease-out forwards;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+
+/* Glow Effect Keyframes */
+@keyframes glowEffect {
+  from {
+    text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 15px #00f0ff;
+  }
+  to {
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+  }
+}
+
+/* Optional: Fade Slide & Fade Up Animations */
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
