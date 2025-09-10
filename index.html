@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to CHUZYTECH</title>
+  <title>WELCOME TO CHUZYTECH</title>
   <!-- Meta -->
   <meta name="description"
     content="Bringing your digital vision to life with expert design, development, and creativity." />
@@ -31,14 +31,16 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
+
+      <!-- ✅ Add left margin to logo -->
+      <a class="navbar-brand ms-3" href="#">
         <img src="images/chuzytech_logo.png" alt="CHUZYTECH Logo" style="height: 40px; margin-right: 10px;">
       </a>
 
-      <!-- ✅ Custom Toggler with Hamburger Icon -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <!-- ✅ Add right margin to toggler -->
+      <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="toggler-icon">&#9776;</span> <!-- ☰ icon -->
       </button>
@@ -87,50 +89,79 @@
     });
   </script>
 
-  <!-- Modern Premium Header with Light Flare + Water Particles -->
+  <!-- Modern Premium Header -->
   <div class="container-fluid mt-5">
     <header class="text-center text-white modern-header">
-      <div class="header-inner homie">
-        <h2 class="display-3 fw-bold chuzytech-text animation-title">
-          <span class="text-white">CHUZY</span><span class="text-warning animation-title">TECH</span>
+      <div class="header-inner homie rounded-4 glow-pulse">
+        <!-- Title -->
+        <h2 class="display-3 fw-bold chuzytech-text premium-title">
+          <span class="text-gradient">CHUZY</span><span class="text-warning">TECH</span>
         </h2>
-        <p class="text-uppercase fw-semibold animate-subtitle subtitle-text small fs-6 fs-md-5 fs-lg-4">
+
+        <!-- Subtitle -->
+        <p class="text-uppercase fw-semibold subtitle-text glow-sync">
           Technology & Digital Solutions
         </p>
-
       </div>
 
-      <!-- Light Flare Particles -->
+      <!-- Animated Elements -->
       <div class="flare-container">
-        <!-- 8 flares -->
-        <span class="flare"></span><span class="flare"></span><span class="flare"></span><span class="flare"></span>
-        <span class="flare"></span><span class="flare"></span><span class="flare"></span><span class="flare"></span>
-
-        <!-- 5 water drops -->
-        <span class="water-drop"></span><span class="water-drop"></span><span class="water-drop"></span>
-        <span class="water-drop"></span><span class="water-drop"></span>
+        <span class="flare"></span><span class="flare"></span>
+        <span class="flare"></span><span class="flare"></span>
+        <span class="orb"></span><span class="orb"></span>
       </div>
     </header>
   </div>
 
   <style>
     /* ==========================
-   Modern Header Scoped Styles
+   Premium Modern Header
 ========================== */
     .modern-header {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      padding: 4rem 2rem;
-      border-radius: 15px;
+      padding: 5rem 2rem;
+      border-radius: 24px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Gradient Title */
+    .text-gradient {
+      background: linear-gradient(90deg, #00f0ff, #00ff99);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Title Glow with Depth */
+    .premium-title {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: fadeSlideIn 1.2s ease-out forwards, glowEffect 2.5s infinite alternate;
     }
 
     /* Subtitle */
     .subtitle-text {
-      color: #95A5A6;
-      margin-top: .5rem;
-      letter-spacing: 2px;
+      color: #e0e0e0;
+      margin-top: .7rem;
+      letter-spacing: 4px;
+      font-size: 1.2rem;
+      display: inline-block;
+    }
+
+    /* Shared Glow Effect (synchronized) */
+    .glow-sync {
+      animation: glowEffect 2.5s infinite alternate;
+    }
+
+    @keyframes glowEffect {
+      from {
+        text-shadow: 0 0 10px #00f0ff, 0 0 25px #00ff99;
+      }
+
+      to {
+        text-shadow: 0 0 20px #00f0ff, 0 0 50px #00ff99;
+      }
     }
 
     /* Particle Container */
@@ -141,47 +172,45 @@
       overflow: hidden;
     }
 
-    /* Flare Glow Particles */
     .flare {
       position: absolute;
-      width: 15px;
-      height: 15px;
-      background: rgba(255, 223, 0, 0.4);
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 223, 0, 0.35);
       border-radius: 50%;
-      filter: blur(4px);
-      animation: flareMove 6s linear infinite;
+      filter: blur(8px);
+      animation: flareMove 10s linear infinite;
     }
 
-    /* Water Drop Particles */
-    .water-drop {
+    .orb {
       position: absolute;
-      width: 8px;
-      height: 15px;
-      background: rgba(0, 174, 255, 0.5);
-      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-      filter: blur(1px);
-      animation: waterFall 5s linear infinite;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, rgba(0, 174, 255, 0.8), transparent);
+      border-radius: 50%;
+      filter: blur(5px);
+      animation: orbFloat 12s ease-in-out infinite;
     }
 
     /* Animations */
     @keyframes flareMove {
       0% {
         transform: translate(0, 0) scale(0.5);
-        opacity: 0.6;
-      }
-
-      25% {
-        transform: translate(20px, -20px) scale(1);
-        opacity: 1;
-      }
-
-      50% {
-        transform: translate(0, -40px) scale(0.7);
         opacity: 0.5;
       }
 
+      25% {
+        transform: translate(60px, -60px) scale(1);
+        opacity: 0.9;
+      }
+
+      50% {
+        transform: translate(0, -90px) scale(0.7);
+        opacity: 0.4;
+      }
+
       75% {
-        transform: translate(-20px, -20px) scale(1);
+        transform: translate(-60px, -60px) scale(1);
         opacity: 0.8;
       }
 
@@ -191,39 +220,130 @@
       }
     }
 
-    @keyframes waterFall {
+    @keyframes orbFloat {
       0% {
-        transform: translateY(0) scaleY(1);
-        opacity: 0.7;
+        transform: translateY(0) translateX(0);
+        opacity: 0.6;
       }
 
-      70% {
-        transform: translateY(400px) scaleY(0.9);
+      50% {
+        transform: translateY(-70px) translateX(40px);
         opacity: 1;
       }
 
       100% {
-        transform: translateY(600px) scaleY(0.5);
-        opacity: 0;
+        transform: translateY(0) translateX(0);
+        opacity: 0.6;
       }
     }
 
-    /* Title Glow Animation */
-    .animation-title {
-      animation: fadeSlideIn 1.2s ease-out forwards, glowEffect 2s infinite alternate;
-    }
-
-    @keyframes glowEffect {
-      from {
-        text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff;
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+      .modern-header {
+        padding: 3.5rem 1rem;
       }
 
-      to {
-        text-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff;
+      .modern-header .display-3 {
+        font-size: 2.2rem;
+      }
+
+      .subtitle-text {
+        font-size: 1rem;
       }
     }
 
-    /* Responsive Breakpoints */
+    @media (max-width: 480px) {
+      .modern-header {
+        padding: 3rem 1rem;
+      }
+
+      .modern-header .display-3 {
+        font-size: 1.9rem;
+      }
+
+      .subtitle-text {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+      }
+    }
+  </style>
+
+  <!-- Animated Elements -->
+  <div class="flare-container">
+    <!-- Soft glowing flares -->
+    <span class="flare"></span><span class="flare"></span>
+    <span class="flare"></span><span class="flare"></span>
+
+    <!-- Floating orbs -->
+    <span class="orb"></span><span class="orb"></span>
+
+    <!-- Water drops -->
+    <span class="drop"></span>
+    <span class="drop"></span>
+    <span class="drop"></span>
+  </div>
+  </header>
+  </div>
+
+  <style>
+    /* ==========================
+   Premium Modern Header
+========================== */
+    .modern-header {
+      background: linear-gradient(135deg, #203a43, #2c5364);
+      padding: 4rem 2rem;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Gradient Title */
+    .text-gradient {
+      background: linear-gradient(90deg, #00f0ff, #00ff99);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Subtitle */
+    .subtitle-text {
+      color: #d1d1d1;
+      margin-top: .5rem;
+      letter-spacing: 3px;
+      font-size: 1.1rem;
+    }
+
+    /* ==========================
+   Glow Pulse Effect
+========================== */
+    .glow-pulse {
+      box-shadow: 0 0 10px rgba(0, 255, 200, 0.4),
+        0 0 20px rgba(0, 191, 255, 0.3),
+        0 0 40px rgba(0, 255, 200, 0.2);
+      animation: glowPulseBox 3s ease-in-out infinite;
+    }
+
+    @keyframes glowPulseBox {
+      0% {
+        box-shadow: 0 0 10px rgba(0, 255, 200, 0.4),
+          0 0 20px rgba(0, 191, 255, 0.3),
+          0 0 40px rgba(0, 255, 200, 0.2);
+      }
+
+      50% {
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.8),
+          0 0 40px rgba(0, 191, 255, 0.6),
+          0 0 80px rgba(0, 255, 200, 0.4);
+      }
+
+      100% {
+        box-shadow: 0 0 10px rgba(0, 255, 200, 0.4),
+          0 0 20px rgba(0, 191, 255, 0.3),
+          0 0 40px rgba(0, 255, 200, 0.2);
+      }
+    }
+
+    /* Responsive Tweaks */
     @media (max-width: 768px) {
       .modern-header {
         padding: 3rem 1rem;
@@ -235,15 +355,6 @@
 
       .subtitle-text {
         font-size: 1rem;
-      }
-
-      /* Hide 2 flares + 1 drop */
-      .flare:nth-child(n+7) {
-        display: none;
-      }
-
-      .water-drop:nth-child(n+12) {
-        display: none;
       }
     }
 
@@ -260,101 +371,409 @@
         font-size: 0.9rem;
         letter-spacing: 1px;
       }
+    }
+  </style>
 
-      /* Keep only 4 flares + 2 drops */
-      .flare:nth-child(n+5) {
-        display: none;
+
+  <style>
+    /* ==========================
+   Premium Modern Header
+========================== */
+    .modern-header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      padding: 5rem 2rem;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Animated shine overlay */
+    .modern-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(120deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.1) 50%,
+          transparent 100%);
+      animation: shine 8s linear infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        left: -100%;
       }
 
-      .water-drop:nth-child(n+11) {
-        display: none;
+      100% {
+        left: 100%;
       }
     }
 
-    @media (max-width: 320px) {
+    /* Gradient Title */
+    .text-gradient {
+      background: linear-gradient(90deg, #00f0ff, #00ff99);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Title Glow with Depth */
+    .premium-title {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: fadeSlideIn 1.2s ease-out forwards, glowEffect 2s infinite alternate;
+    }
+
+    @keyframes glowEffect {
+      from {
+        text-shadow: 0 0 10px #00f0ff, 0 0 25px #00ff99;
+      }
+
+      to {
+        text-shadow: 0 0 20px #00f0ff, 0 0 50px #00ff99;
+      }
+    }
+
+    /* Subtitle */
+    .subtitle-text {
+      color: #e0e0e0;
+      margin-top: .7rem;
+      letter-spacing: 4px;
+      font-size: 1.2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .subtitle-text::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #00f0ff, #00ff99);
+      border-radius: 50px;
+      animation: underlinePulse 3s infinite alternate;
+    }
+
+    @keyframes underlinePulse {
+      0% {
+        opacity: 0.3;
+        transform: scaleX(0.6);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+
+    /* Particle Container */
+    .flare-container {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    /* Flares */
+    .flare {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 223, 0, 0.35);
+      border-radius: 50%;
+      filter: blur(8px);
+      animation: flareMove 10s linear infinite;
+    }
+
+    /* Floating Orbs */
+    .orb {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, rgba(0, 174, 255, 0.8), transparent);
+      border-radius: 50%;
+      filter: blur(5px);
+      animation: orbFloat 12s ease-in-out infinite;
+    }
+
+
+    /* Glow Pulse Animation */
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 8px rgba(0, 191, 255, 0.6),
+          0 0 18px rgba(0, 255, 200, 0.5),
+          0 0 28px rgba(0, 191, 255, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 18px rgba(0, 191, 255, 1),
+          0 0 40px rgba(0, 255, 200, 0.9),
+          0 0 60px rgba(0, 191, 255, 0.8);
+      }
+
+      100% {
+        box-shadow: 0 0 8px rgba(0, 191, 255, 0.6),
+          0 0 18px rgba(0, 255, 200, 0.5),
+          0 0 28px rgba(0, 191, 255, 0.4);
+      }
+    }
+
+    /* Animations */
+    @keyframes flareMove {
+      0% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 0.5;
+      }
+
+      25% {
+        transform: translate(60px, -60px) scale(1);
+        opacity: 0.9;
+      }
+
+      50% {
+        transform: translate(0, -90px) scale(0.7);
+        opacity: 0.4;
+      }
+
+      75% {
+        transform: translate(-60px, -60px) scale(1);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 0.6;
+      }
+    }
+
+    @keyframes orbFloat {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: translateY(-70px) translateX(40px);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.6;
+      }
+    }
+
+    @keyframes dropFall {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+
+      80% {
+        transform: translateY(400px) scale(1.1, 0.9);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translateY(460px) scale(0.8, 1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
       .modern-header {
-        padding: 2rem 0.8rem;
+        padding: 3.5rem 1rem;
       }
 
       .modern-header .display-3 {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
       }
 
       .subtitle-text {
-        font-size: 0.8rem;
-        letter-spacing: 0.5px;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .modern-header {
+        padding: 3rem 1rem;
       }
 
-      /* Keep only 2 flares + 1 drop for minimal look */
-      .flare:nth-child(n+3) {
-        display: none;
+      .modern-header .display-3 {
+        font-size: 1.9rem;
       }
 
-      .water-drop:nth-child(n+10) {
-        display: none;
+      .subtitle-text {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
       }
     }
   </style>
 
-  <div class="container mt-1 p-5 mb-0 pb-0" style="color: #aef;">
-    <div class="text-center fst-italic px-3" style="line-height: 1.8;">
-      <p class="fw-bold fs-4">Welcome to My Webpage!</p>
+  <!-- Modern Premium Intro Section -->
+  <div class="container my-5">
+    <div class="modern-intro text-center p-5 rounded-4 shadow-lg">
 
-      <p>
-        I’m <strong>Oko Samuel Ogbonnia</strong> a passionate
-        <strong>Software Developer</strong> and <strong>Graphic
-          Designer</strong>,
+      <!-- Professional Icon (Laptop / Code Symbol) -->
+      <div class="intro-icon mb-3">
+      </div>
+
+      <h2 class="fw-bold display-5 mb-3">
+        Welcome to <span class="text-gradient">My Webpage</span>
+      </h2>
+
+      <p class="lead mb-4">
+        I’m <strong>Oko Samuel Ogbonnia</strong>, a passionate
+        <strong>Software Developer</strong> and <strong>Graphic Designer</strong>,
         dedicated to bringing ideas to life with creativity and precision.
       </p>
 
-      <p>
+      <p class="mb-3">
         I specialize in <strong>creative web development</strong>,
         <strong>WordPress site design</strong>, and elegant
-        <strong>UI/UX layouts</strong> that deliver seamless digital
-        experiences.
-        Alongside development, I also provide <strong>professional content
-          writing</strong>
-        that helps brands grow and connect with their audience.
+        <strong>UI/UX layouts</strong> that deliver seamless digital experiences.
       </p>
 
-      <p>
-        In addition, I offer a wide range of <strong>graphic design
-          services</strong>,
-        including logos, branding materials, print designs, social media
-        creatives,
-        and product mockups all tailored to make your brand visually
+      <p class="mb-0">
+        I also provide <strong>professional content writing</strong> and
+        <strong>graphic design services</strong> including logos, branding,
+        social media creatives, and mockups all tailored to make your brand
         unforgettable.
       </p>
     </div>
   </div>
 
+  <style>
+    /* Gradient text */
+    .text-gradient {
+      background: linear-gradient(45deg, #00f0ff, #ffcc70);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Glassmorphism Card Style */
+    .modern-intro {
+      background: rgba(15, 23, 42, 0.8);
+      /* semi-transparent dark */
+      backdrop-filter: blur(12px);
+      color: #f1f5f9;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle glow border effect */
+    .modern-intro::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      padding: 2px;
+      background: linear-gradient(135deg, #00f0ff, #ffcc70, #9b5de5);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .modern-intro:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .modern-intro p {
+      line-height: 1.8;
+    }
+
+    /* Icon Styling */
+    .intro-icon {
+      font-size: 2.8rem;
+      background: linear-gradient(135deg, #00f0ff, #ffcc70);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: floatIcon 3s ease-in-out infinite;
+    }
+
+    @keyframes floatIcon {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+  </style>
+
+
   <!-- Hero Section Container -->
   <div class="container py-5">
-    <section class="hero-section text-center p-4 p-md-5 rounded-4 shadow-lg bg-light position-relative">
-      <h1 class="fw-bold text-dark mb-3 animate-title homie fs-3 fs-md-2 fs-lg-1">
+    <section
+      class="hero-section d-flex flex-column flex-md-wrap justify-content-center align-items-center text-center p-4 p-md-5 rounded-4 shadow-lg bg-light position-relative">
+
+      <!-- Title -->
+      <h1 class="fw-bold text-dark mb-3 animate-title homie fs-4 fs-sm-3 fs-md-2 fs-lg-1">
         Transforming Ideas into Digital Reality
       </h1>
 
+      <!-- Subtitle -->
       <p class="lead fst-italic mb-4 animate-subtitle px-2 px-md-5">
-        At <strong class="text-light homie">CHUZY<span class="text-warning">TECH</span></strong>, I craft tailored
-        solutions in design, development, and branding that elevate your
-        online presence with elegance and precision!
+        At <strong class="text-light homie">CHUZY<span class="text-warning">TECH</span></strong>,
+        I craft tailored solutions in design, development, and branding that
+        elevate your online presence with elegance and precision!
       </p>
 
-      <a href="contact.html" class="btn btn-sm btn-md px-4 py-2 shadow-sm fw-semibold animated-text homie"
-        style="background: linear-gradient(135deg, #ff4e50, #f9d423);">
-        Let's Work Together
+      <!-- Call to Action Button -->
+      <a href="contact.html" class="btn btn-sm btn-md shadow-sm fw-semibold animated-text homie mb-3" style="background: linear-gradient(135deg, #ff4e50, #f9d423);
+          width: 110px; 
+          height: 70px; 
+          display: flex; 
+          align-items: center; 
+          justify-content: center; 
+          border-radius: 5px; 
+          text-align: center;">
+        Let's Work<br>Together
       </a>
 
+
       <!-- Gallery Badge -->
-      <!-- Gallery Badge -->
-      <div class="position-absolute top-0 end-0 m-2 m-md-3 shadow gallery-badge animate-badge">
-        <a href="gallery.html" class="gallery-link d-inline-block fw-semibold homie">
+      <div class="gallery-badge animate-badge shadow fw-semibold homie">
+        <a href="gallery.html" class="gallery-link d-inline-block">
           GALLERY
         </a>
       </div>
     </section>
   </div>
+
+  <style>
+    /* Default (desktop/tablet) */
+    .gallery-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0.5rem;
+    }
+
+    /* Mobile fix: move badge under button */
+    @media (max-width: 767px) {
+      .gallery-badge {
+        position: static;
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
 
   <aside>
 
@@ -434,7 +853,7 @@
     aside {
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
-      min-height: 70vh;
+      min-height: 60vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -606,7 +1025,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer bg-dark">
+  <footer class="footer">
     <p class="text-center lead">Follow Me</p>
     <div class="social-icons mb-2">
       <a href="https://www.facebook.com/ObomeChuzy/" target="_blank"><i class="fab fa-facebook"></i></a>
