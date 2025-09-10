@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CHUZYTECH Gallery</title>
+  <title>CHUZYTECH | GALLERY</title>
   <!-- Meta -->
   <meta name="description"
     content="Explore creative graphic designs, UI/UX, and web projects from CHUZYTECH by Oko Samuel Ogbonnia." />
@@ -30,14 +30,16 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
+
+      <!-- ✅ Add left margin to logo -->
+      <a class="navbar-brand ms-3" href="#">
         <img src="images/chuzytech_logo.png" alt="CHUZYTECH Logo" style="height: 40px; margin-right: 10px;">
       </a>
 
-      <!-- ✅ Custom Toggler with Hamburger Icon -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <!-- ✅ Add right margin to toggler -->
+      <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="toggler-icon">&#9776;</span> <!-- ☰ icon -->
       </button>
@@ -96,10 +98,9 @@
         <h1 class="fw-bold text-info mb-3">My Graphics
           Gallery</h1>
         <p class="lead fst-italic text-light">
-          Welcome to my Graphics Gallery a collection of my finest designs,
-          blending creativity with purpose. Each piece showcases innovation,
-          aesthetics, and visual storytelling!
+          Welcome to my Graphics Gallery a showcase of creative, purposeful, and innovative designs.
         </p>
+
       </div>
     </div>
   </section>
@@ -109,18 +110,39 @@
     <p class="text-center text-light mb-5">A showcase of creativity, passion,
       and precision.</p>
 
-    <!-- Modern Search Bar -->
-    <div class="mb-4 relative max-w-lg mx-auto">
-      <input id="gallery-search" type="search"
-        class="form-control form-control-lg pl-5 pr-12 py-3 rounded-pill shadow-sm border-0"
-        placeholder="🔍  Search gallery…" style="background: #f9f9f9; font-size: 1rem; transition: all 0.3s ease;">
 
-      <!-- Search Icon (clickable) -->
+    <!-- Modern Search Bar -->
+    <div class="mb-4 position-relative max-w-md mx-auto">
+      <input id="gallery-search" type="search"
+        class="form-control pl-4 pr-10 py-1 rounded-pill shadow-sm border-0 modern-search"
+        placeholder="Search gallery…">
+
+      <!-- Search Icon -->
       <button type="button" class="btn btn-link position-absolute top-50 end-0 translate-middle-y pe-3"
-        style="color: #888;">
+        style="color: #666; font-size: 0.9rem;">
         <i class="bi bi-search"></i>
       </button>
     </div>
+
+    <style>
+      .modern-search {
+        background: #fdfdfd;
+        font-size: 0.9rem;
+        height: 34px;
+        /* Reduced height */
+        transition: all 0.3s ease;
+      }
+
+      .modern-search:focus {
+        outline: none;
+        box-shadow: 0 0 6px rgba(0, 150, 255, 0.45);
+        border: 1px solid rgba(0, 150, 255, 0.6);
+      }
+
+      .modern-search:hover {
+        box-shadow: 0 0 4px rgba(0, 150, 255, 0.3);
+      }
+    </style>
 
     <!-- Bootstrap Icons CDN (if not already included) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -134,7 +156,7 @@
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
   <!-- Footer -->
-  <footer class="footer bg-dark">
+  <footer class="footer">
     <p class="text-center lead">Follow Me</p>
     <div class="social-icons mb-2">
       <a href="https://www.facebook.com/ObomeChuzy/" target="_blank"><i class="fab fa-facebook"></i></a>
