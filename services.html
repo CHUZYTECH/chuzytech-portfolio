@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHUZYTECH Portfolio Webpage</title>
+    <title>CHUZYTECH | PORFOLIO WEBPAGE</title>
     <!-- Meta -->
     <meta name="description"
         content="Bringing your digital vision to life with expert design, development, and creativity." />
@@ -37,14 +37,16 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+
+            <!-- ✅ Add left margin to logo -->
+            <a class="navbar-brand ms-3" href="#">
                 <img src="images/chuzytech_logo.png" alt="CHUZYTECH Logo" style="height: 40px; margin-right: 10px;">
             </a>
 
-            <!-- ✅ Custom Toggler with Hamburger Icon -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <!-- ✅ Add right margin to toggler -->
+            <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="toggler-icon">&#9776;</span> <!-- ☰ icon -->
             </button>
@@ -100,35 +102,37 @@
 
             <!-- Content Box -->
             <div class="floating-glass animate__animated animate__fadeInUp">
-                <h1 class="fw-bold text-info mb-3">My
-                    Services</h1>
+                <h1 class="fw-bold text-info mb-3">My Services</h1>
                 <p class="lead fst-italic text-light">
-                    I craft custom digital solutions to elevate your brand
-                    from web development and WordPress to standout graphic
-                    design, I turn your vision into reality with creativity
-                    and precision!
+                    I create custom digital solutions from web development
+                    and WordPress to graphic design bringing your
+                    vision to life with creativity and precision.
                 </p>
             </div>
+
         </div>
     </section>
 
     <!-- Services Cards Section -->
-    <section class="section container text-center">
+    <section class="section container text-center px-3 px-sm-4">
         <h2 class="section-title">What I Do</h2>
         <div class="row g-4 border-1">
+
+            <!-- Web Development -->
             <div class="col-md-4">
                 <div class="card mission-card p-4">
-                    <i class="fa fa-laptop-code fa-3x" style="color: #0DCAF0;"></i>
+                    <i class="fa fa-laptop-code service-icon mb-3"></i>
                     <h5>Web Development</h5>
                     <p>I build professional websites using HTML, CSS,
-                        JavaScript, Bootstrap and PHP that look stunning and work
-                        perfectly.</p>
+                        JavaScript, Bootstrap and PHP that look stunning and
+                        work perfectly.</p>
                 </div>
             </div>
 
+            <!-- Graphics Design -->
             <div class="col-md-4">
                 <div class="card mission-card p-4">
-                    <i class="fa fa-paint-brush fa-3x mb-3" style="color: #0DCAF0;"></i>
+                    <i class="fa fa-paint-brush service-icon mb-3"></i>
                     <h5>Graphics Design</h5>
                     <p>From brand logos to flyers, I design eye-catching
                         graphics that represent your identity and stand out
@@ -136,9 +140,10 @@
                 </div>
             </div>
 
+            <!-- UI/UX Design -->
             <div class="col-md-4">
                 <div class="card mission-card p-4">
-                    <i class="fa fa-mobile-alt fa-3x mb-3" style="color: #0DCAF0;"></i>
+                    <i class="fa fa-mobile-alt service-icon mb-3"></i>
                     <h5>UI/UX Design</h5>
                     <p>I create intuitive user interfaces and seamless user
                         experiences for both web and mobile
@@ -148,17 +153,30 @@
 
             <!-- Full-width WordPress Service Card -->
             <div class="col-12">
-                <div class="card mission-card p-5 ">
-                    <i class="fab fa-wordpress fa-4x mb-3" style="color: #0DCAF0;"></i>
+                <div class="card mission-card p-5">
+                    <i class="fab fa-wordpress service-icon mb-3"></i>
                     <h4>WordPress Development</h4>
-                    <p class>
-                        I create dynamic and customizable WordPress websites
+                    <p>I create dynamic and customizable WordPress websites
                         that are SEO-friendly, responsive, and tailored to
-                        your business goals.
-                    </p>
+                        your business goals.</p>
                 </div>
             </div>
+
+            <!-- Full-width Content Writing Service Card -->
+            <div class="col-12">
+                <div class="card mission-card p-5">
+                    <i class="fa fa-pencil-alt service-icon mb-3"></i>
+                    <h4>Content Writing</h4>
+                    <p>I craft engaging, SEO-friendly, and audience-focused
+                        content that tells your story, builds trust, and
+                        enhances your brand presence across websites, blogs,
+                        and digital platforms.</p>
+                </div>
+            </div>
+
         </div>
+
+        <!-- Gallery Button -->
         <div class="mt-5">
             <a href="gallery.html" class="btn btn-info mt-3 text-black link-light px-4 py-2 rounded-pill shadow-sm"
                 style="transition: all 0.3s ease; transform: scale(1);"
@@ -169,8 +187,44 @@
         </div>
     </section>
 
+    <style>
+        /* Default (desktop) */
+        .service-icon {
+            font-size: 3.5rem;
+            color: #0DCAF0;
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            /* h5 size */
+            font-weight: 600;
+        }
+
+        /* Tablets */
+        @media (max-width: 768px) {
+            .service-icon {
+                font-size: 3rem;
+            }
+
+            .service-title {
+                font-size: 1.15rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 576px) {
+            .service-icon {
+                font-size: 2.7rem;
+            }
+
+            .service-title {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+
     <!-- Footer -->
-    <footer class="footer bg-dark">
+    <footer class="footer">
         <p class="text-center lead">Follow Me</p>
         <div class="social-icons mb-2">
             <a href="https://www.facebook.com/ObomeChuzy/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -182,7 +236,8 @@
             <a href="mailto:chuzytech@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
             <a href="https://t.me/ObomeChuzy" target="_blank"><i class="fab fa-telegram"></i></a>
         </div>
-        <p>&copy; <span id="year"></span> CHUZYTECH. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> CHUZYTECH. All rights
+            reserved.</p>
         <p id="local-date" class="text-center"></p>
     </footer>
 
