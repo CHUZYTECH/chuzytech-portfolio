@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHUZYTECH Portfolio Webpage</title>
+  <title>CHUZYTECH | PORTFOLIO WEBPAGE</title>
   <!-- Meta -->
   <meta name="description"
     content="Bringing your digital vision to life with expert design, development, and creativity." />
@@ -29,14 +29,16 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
+
+      <!-- ✅ Add left margin to logo -->
+      <a class="navbar-brand ms-3" href="#">
         <img src="images/chuzytech_logo.png" alt="CHUZYTECH Logo" style="height: 40px; margin-right: 10px;">
       </a>
 
-      <!-- ✅ Custom Toggler with Hamburger Icon -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <!-- ✅ Add right margin to toggler -->
+      <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="toggler-icon">&#9776;</span> <!-- ☰ icon -->
       </button>
@@ -92,16 +94,12 @@
 
       <!-- Content Box -->
       <div class="floating-glass animate__animated animate__fadeInUp">
-        <h1 class="fw-bold text-info mb-3">Explore My
-          Portfolio</h1>
+        <h1 class="fw-bold text-info mb-3">Explore My Portfolio</h1>
         <p class="lead fst-italic text-light">
-          Discover a showcase of my finest work, where
-          creativity
-          meets functionality. Each project highlights my commitment to
-          excellence and my ability to deliver outstanding digital solutions
-          tailored to my clients' unique needs!
+          Discover my work where creativity meets functionality delivering tailored digital solutions with excellence.
         </p>
       </div>
+
     </div>
   </section>
 
@@ -138,8 +136,6 @@
       background: linear-gradient(135deg, rgba(255, 223, 0, 0.25), rgba(255, 193, 7, 0.1));
     }
   </style>
-
-
 
   <div class="container m-auto text-light">
 
@@ -290,14 +286,53 @@
 
   <!-- Portfolio Download Section -->
   <div class="text-center mt-5 mb-5">
-    <!-- <h4 class="text-warning mb-3">Download My Portfolio</h4> -->
-    <a href="documents/Oko-Samuel-Ogbonnia-Resume.pdf" class="btn btn-outline-info btn-lg" download>
+    <a id="downloadBtn" href="documents/oko-samuel-ogbonnia-resume.pdf" class="btn btn-outline-info btn-lg" download>
       <i class="fas fa-file-download me-2"></i>Download CV/Resume
     </a>
   </div>
 
+  <!-- Bootstrap Toast -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+    <div id="downloadToast" class="toast align-items-center text-bg-success border-0 slide-toast" role="alert"
+      aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          ✅ Download started... please check your device storage.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .slide-toast {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .toast.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .toast.hide {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  </style>
+
+  <script>
+    document.getElementById("downloadBtn").addEventListener("click", function () {
+      // Show Bootstrap toast
+      const toastEl = document.getElementById("downloadToast");
+      const toast = new bootstrap.Toast(toastEl, { delay: 5000 });
+      toast.show();
+    });
+  </script>
+
   <!-- Footer -->
-  <footer class="footer bg-dark">
+  <footer class="footer">
     <p class="text-center lead">Follow Me</p>
     <div class="social-icons mb-2">
       <a href="https://www.facebook.com/ObomeChuzy/" target="_blank"><i class="fab fa-facebook"></i></a>
