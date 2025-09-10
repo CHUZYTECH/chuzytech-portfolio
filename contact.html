@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CONTACT| CHUZYTECH</title>
+  <title>CONTACT | CHUZYTECH</title>
   <!-- Fonts and Icons -->
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap"
@@ -25,14 +25,16 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
+
+      <!-- ✅ Add left margin to logo -->
+      <a class="navbar-brand ms-3" href="#">
         <img src="images/chuzytech_logo.png" alt="CHUZYTECH Logo" style="height: 40px; margin-right: 10px;">
       </a>
 
-      <!-- ✅ Custom Toggler with Hamburger Icon -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <!-- ✅ Add right margin to toggler -->
+      <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="toggler-icon">&#9776;</span> <!-- ☰ icon -->
       </button>
@@ -89,12 +91,12 @@
       <!-- Content Box -->
       <div class="floating-glass animate__animated animate__fadeInUp">
         <h1 class="fw-bold text-info mb-3">Connect with Me</h1>
-        <p class="lead fst-italic text-light"> I am here to bring your digital ideas to life. Have a question, need a
-          quote, or ready to start? Reach out via the form or connect with me on social media let’s create something
-          amazing together!
-        </p>
+        <p class="lead fst-italic text-light">
+          Let’s bring your vision to life. Have a question or ready to start? Reach out via the form or connect with me
+          we’ll create something amazing together.
         </p>
       </div>
+
     </div>
   </section>
 
@@ -111,16 +113,8 @@
     </p>
   </div>
 
-  <style>
-    /* Minimal custom style just for placeholder */
-    .form-control::placeholder {
-      color: white;
-      opacity: 0.7;
-    }
-  </style>
-
   <!-- Contact Form Section -->
-  <div class="container mt-5 p-4 w-50 border border-1 border-secondary rounded-4 shadow">
+  <div class="container mt-5 p-4 w-75 border border-1 border-secondary rounded-4 shadow">
     <form id="contactform" action="https://formspree.io/f/mqakkgjz" method="POST">
 
       <div class="form-group mb-3">
@@ -199,13 +193,18 @@
   </script>
 
   <div class="container text-center mt-5 text-white">
-    <h2 class="section-title">Address</h2>
-    <p class="mb-5">Afikpo North LGA, Ebonyi State, Nigeria</p>
+    <!-- Map + Address Section -->
+    <div class="container w-75 mb-5 mx-auto border border-1 border-secondary rounded-4 shadow p-3 text-white"
+      style="transition: all 0.3s ease; transform: scale(1);"
+      onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.4)';"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.2)';">
 
-    <div class="map-1 container mb-5">
+      <h4 class="mb-3">Address</h4>
+      <p>Afikpo North LGA, Ebonyi State, Nigeria</p>
+
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254013.32192298185!2d7.768513436238221!3d5.861507767048085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105ccfc0dd6a90b1%3A0xd53b2c461c02d345!2sAfikpo%20North%2C%20Ebonyi!5e0!3m2!1sen!2sng!4v1740615102749!5m2!1sen!2sng"
-        width="600" height="450" style="border:0;" allowfullscreen loading="lazy"
+        class="w-100 rounded-3" height="260" style="border:0;" allowfullscreen loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
@@ -218,12 +217,11 @@
         Review
       </a>
     </div>
-  
+
   </div>
 
-  
   <!-- Footer -->
-  <footer class="footer bg-dark">
+  <footer class="footer">
     <p class="text-center lead">Follow Me</p>
     <div class="social-icons mb-2">
       <a href="https://www.facebook.com/ObomeChuzy/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -239,7 +237,6 @@
     <p id="local-date" class="text-center"></p>
   </footer>
 
-
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Bootstrap min -->
@@ -249,5 +246,4 @@
   <script src="js/main2.js"></script>
 
 </body>
-
 </html>
