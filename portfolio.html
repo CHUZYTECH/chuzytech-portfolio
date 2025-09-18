@@ -286,7 +286,8 @@
 
   <!-- Portfolio Download Section -->
   <div class="text-center mt-5 mb-5">
-    <a id="downloadBtn" href="documents/oko-samuel-ogbonnia-resume.pdf" class="btn btn-outline-warning btn-lg" download>
+    <a id="downloadBtn" href="documents/oko-samuel-ogbonnia-resume.pdf"
+      class="btn btn-outline-warning btn-lg download-btn" download>
       <i class="fas fa-file-download me-2"></i>Download CV/Resume
     </a>
   </div>
@@ -305,6 +306,7 @@
   </div>
 
   <style>
+    /* Toast Animation */
     .slide-toast {
       transform: translateX(100%);
       opacity: 0;
@@ -319,6 +321,50 @@
     .toast.hide {
       transform: translateX(100%);
       opacity: 0;
+    }
+
+    /* Scalable button styling */
+    .download-btn {
+      font-size: clamp(10px, 2.5vw, 16px);
+      /* text scales 10px → 16px */
+      padding: clamp(4px, 1vw, 12px) clamp(8px, 2vw, 20px);
+      /* padding scales */
+    }
+
+    .download-btn i {
+      font-size: clamp(12px, 3vw, 18px);
+      /* icon scales */
+      margin-right: clamp(3px, 1vw, 8px);
+    }
+
+    /* Responsive button styling */
+    @media (max-width: 576px) {
+      .download-btn {
+        font-size: 12px;
+        /* smaller text */
+        padding: 5px 10px;
+        /* compact padding */
+      }
+
+      .download-btn i {
+        margin-right: 4px;
+        /* tighter spacing */
+      }
+    }
+
+    @media (max-width: 320px) {
+      .download-btn {
+        font-size: 10px;
+        /* very small text */
+        padding: 4px 8px;
+        /* very compact button */
+      }
+
+      .download-btn i {
+        font-size: 12px;
+        /* make icon smaller */
+        margin-right: 3px;
+      }
     }
   </style>
 
