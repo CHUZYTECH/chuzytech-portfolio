@@ -94,8 +94,8 @@
     <header class="modern-header text-center text-white">
       <div class="header-inner glass-card rounded-4 mt-3">
         <!-- Title -->
-        <h2 class="fw-bold premium-title mb-0">
-          <span class="text-gradient homie">CHUZY</span><span class="text-warning">TECH</span>
+        <h2 class="fw-bold premium-title mb-0 homie">
+          <span class="">CHUZY</span><span class="text-light">TECH</span>
         </h2>
 
         <!-- Subtitle -->
@@ -355,7 +355,7 @@
       </h1>
 
       <!-- Subtitle -->
-      <p class="lead fst-italic mb-4 animate-subtitle px-2 px-md-5 text-black">
+      <p class="lead fst-italic mb-4 animate-subtitle px-2 px-md-5">
         At <strong class="text-light homie">CHUZY<span class="text-warning">TECH</span></strong>,
         I craft tailored solutions in design, development, and branding that
         elevate your online presence with elegance and precision!
@@ -431,40 +431,32 @@
         justify-content: center;
         font-family: 'Segoe UI', sans-serif;
         perspective: 1000px;
+        padding: 20px;
       }
 
       .globe-container {
         position: relative;
-        width: 315px;
-        height: 315px;
+        width: 90vw;
+        max-width: 320px;
+        aspect-ratio: 1 / 1;
         border-radius: 50%;
-        border: 2px solid #ffc107;
-        box-shadow: 0 0 6px #ffc107, 0 0 12px #ffcc00;
+        border: 2px solid #38bdf8;
+        box-shadow: 0 0 6px #38bdf8, 0 0 12px #00eaff;
         animation: rotateGlobe 20s linear infinite, borderGlow 3s ease-in-out infinite;
         transform-style: preserve-3d;
-      }
-
-      @keyframes rotateGlobe {
-        0% {
-          transform: rotateY(0deg);
-        }
-
-        100% {
-          transform: rotateY(360deg);
-        }
       }
 
       @keyframes borderGlow {
 
         0%,
         100% {
-          box-shadow: 0 0 6px #ffc107, 0 0 12px #ffcc00;
-          border-color: #ffc107;
+          box-shadow: 0 0 6px #38bdf8, 0 0 12px #00eaff;
+          border-color: #38bdf8;
         }
 
         50% {
-          box-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffc107;
-          border-color: #ffeb3b;
+          box-shadow: 0 0 10px #00eaff, 0 0 20px #38bdf8;
+          border-color: #00eaff;
         }
       }
 
@@ -490,52 +482,35 @@
       .globe-inner a {
         position: relative;
         display: inline-block;
-        padding: 10px 14px;
-        margin: 8px 0;
+        padding: 6px 10px;
+        margin: 4px 0;
+        font-size: 0.9rem;
         font-weight: bold;
         color: #00ffff;
         text-decoration: none;
-        border: 1px solid transparent;
-        background-color: rgba(255, 255, 255, 0.05);
         border-radius: 30px;
-        overflow: hidden;
-        transition: transform 0.3s ease, border 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
         box-shadow: 0 0 3px rgba(0, 255, 255, 0.4);
+        word-wrap: break-word;
       }
 
       .globe-inner a i {
-        margin-right: 8px;
-      }
-
-      .globe-inner a::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-        transform: translateX(-100%);
-        transition: transform 0.5s ease;
+        margin-right: 6px;
       }
 
       .globe-inner a:hover {
         color: #ffc107;
-        border-color: #ffc107;
         transform: scale(1.05);
         box-shadow: 0 0 4px #ffc107, 0 0 8px #ffcc00, 0 0 12px #ffcc00;
-      }
-
-      .globe-inner a:hover::before {
-        transform: translateX(100%);
       }
 
       .globe-back {
         transform: rotateY(180deg);
         flex-direction: column;
         text-align: center;
-        color: #ffcc00;
-        font-size: 1.5rem;
+        color: #fff;
+        font-size: 1.2rem;
         font-weight: bold;
         animation: glowText 3s ease-in-out infinite;
         text-shadow: 0 0 3px #00ffff, 0 0 6px #00ffff, 0 0 12px #00ffff;
@@ -549,7 +524,7 @@
         }
 
         50% {
-          text-shadow: 0 0 6px #ffcc00, 0 0 12px #ffcc00, 0 0 18px #ffcc00;
+          text-shadow: 0 0 6px #00ffff, 0 0 6px #00ffff, 0 0 12px #00ffff;
         }
       }
 
@@ -557,8 +532,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 315px;
-        height: 315px;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
         border: 2px solid rgba(56, 189, 248, 0.7);
         box-shadow: 0 0 6px #38bdf8, 0 0 10px #00eaff;
@@ -584,6 +559,24 @@
       .globe-container:hover {
         animation-play-state: paused;
       }
+
+      /* 📱 Small screen adjustments */
+      @media (max-width: 480px) {
+        .globe-inner a {
+          font-size: 0.8rem;
+          padding: 5px 8px;
+        }
+
+        .globe-back {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .globe-inner a {
+          font-size: 0.75rem;
+        }
+      }
     </style>
   </aside>
 
@@ -600,25 +593,25 @@
       </p>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <div class="mission-card p-4">
+          <div class="mission-card p-4 border border-1 border-secondary">
             <i class="fas fa-lightbulb fa-3x mb-3"></i>
-            <h5 class="fw-bold mb-2">Innovative Ideas</h5>
+            <h4 class="fw-bold mb-2">Innovative Ideas</h4>
             <p>I think outside the box to create unique solutions tailored to
               your needs.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="mission-card p-4">
+          <div class="mission-card p-4 border border-1 border-secondary">
             <i class="fas fa-rocket fa-3x mb-3"></i>
-            <h5 class="fw-bold mb-2">Rapid Execution</h5>
+            <h4 class="fw-bold mb-2">Rapid Execution</h4>
             <p>I turn ideas into reality, swiftly and effectively, without
               compromising on quality.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="mission-card p-4">
+          <div class="mission-card p-4 border border-1 border-secondary">
             <i class="fas fa-users fa-3x mb-3"></i>
-            <h5 class="fw-bold mb-2">Client-Centric</h5>
+            <h4 class="fw-bold mb-2">Client-Centric</h4>
             <p>Your goals are my mission. I ensure your vision stays at the
               forefront of my work. </p>
           </div>
@@ -634,7 +627,7 @@
       <p class="mb-4">Interested in collaborating or hiring Me for
         your next
         project? Let’s connect and create something great.</p>
-      <a href="contact.html" class="btn btn-warning mt-3 text-black link-light px-4 py-2 rounded-pill shadow-sm"
+      <a href="contact.html" class="btn btn-info mt-3 text-black link-light px-4 py-2 rounded-pill shadow-sm"
         style="transition: all 0.3s ease; transform: scale(1);"
         onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.2)';"
         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)';">
