@@ -3,11 +3,17 @@
   column-count: 3;
   column-gap: 1.25rem;
 }
+
 @media (max-width: 992px) {
-  .masonry-grid { column-count: 2; }
+  .masonry-grid {
+    column-count: 2;
+  }
 }
+
 @media (max-width: 576px) {
-  .masonry-grid { column-count: 1; }
+  .masonry-grid {
+    column-count: 1;
+  }
 }
 
 /* Card style */
@@ -21,7 +27,7 @@
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
   transform: translateY(20px);
   opacity: 0;
-  transition: transform .6s cubic-bezier(.16,.8,.43,1), opacity .6s ease;
+  transition: transform .6s cubic-bezier(.16, .8, .43, 1), opacity .6s ease;
 }
 
 /* Scroll fade-in animation */
@@ -35,7 +41,7 @@
   display: block;
   width: 100%;
   height: auto;
-  transition: transform .8s cubic-bezier(.19,1,.22,1);
+  transition: transform .8s cubic-bezier(.19, 1, .22, 1);
 }
 
 /* Hover zoom effect */
@@ -47,9 +53,10 @@
 .gallery-meta {
   position: absolute;
   bottom: 0;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   padding: 1rem 1.25rem;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.75) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .75) 100%);
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
@@ -72,7 +79,8 @@
 
 .gallery-section {
   max-width: 800px;
-  margin: 0 auto; /* Centers it horizontally */
+  margin: 0 auto;
+  /* Centers it horizontally */
 }
 
 .gallery-section.container {
@@ -99,6 +107,7 @@
   from {
     text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 15px #00f0ff;
   }
+
   to {
     text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #00f0ff;
   }
@@ -106,13 +115,27 @@
 
 /* Fade Slide & Fade Up Animations */
 @keyframes fadeSlideIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(15px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 :root {
@@ -122,7 +145,8 @@
 }
 
 /* Base text */
-main, .site-wrapper {
+main,
+.site-wrapper {
   font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -131,33 +155,65 @@ main, .site-wrapper {
 }
 
 /* ✅ Headings: Playfair Display for H1 & H2 only */
-h1, h2 {
+h1,
+h2 {
   font-family: 'Playfair Display', serif;
   margin: 0 0 var(--space-sm) 0;
   line-height: 1.2;
 }
 
 /* Other Headings: Montserrat */
-h3, h4, h5 {
+h3,
+h4,
+h5 {
   font-family: 'Montserrat', "Segoe UI", Roboto, sans-serif;
   margin: 0 0 var(--space-sm) 0;
   line-height: 1.3;
 }
 
 /* Responsive heading sizes */
-h1 { font-weight: 700; font-size: clamp(2rem, 1.6rem + 2.5vw, 3rem); letter-spacing: -0.01em; }
-h2 { font-weight: 700; font-size: clamp(1.5rem, 1.2rem + 1.8vw, 2.25rem); }
-h3 { font-weight: 600; font-size: clamp(1.125rem, 0.95rem + 1vw, 1.5rem); }
-h4 { font-weight: 600; font-size: clamp(1rem, 0.9rem + 0.6vw, 1.25rem); }
-h5 { font-weight: 500; font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem); }
+h1 {
+  font-weight: 700;
+  font-size: clamp(2rem, 1.6rem + 2.5vw, 3rem);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.2rem + 1.8vw, 2.25rem);
+}
+
+h3 {
+  font-weight: 600;
+  font-size: clamp(1.125rem, 0.95rem + 1vw, 1.5rem);
+}
+
+h4 {
+  font-weight: 600;
+  font-size: clamp(1rem, 0.9rem + 0.6vw, 1.25rem);
+}
+
+h5 {
+  font-weight: 500;
+  font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
+}
 
 /* Paragraphs */
-p { margin: 0 0 var(--space-md) 0; }
-.section { margin-bottom: var(--space-lg); }
+p {
+  margin: 0 0 var(--space-md) 0;
+}
+
+.section {
+  margin-bottom: var(--space-lg);
+}
 
 /* Small devices: slightly smaller body text */
 @media (max-width: 520px) {
-  main, .site-wrapper { font-size: 0.95rem; }
+
+  main,
+  .site-wrapper {
+    font-size: 0.95rem;
+  }
 }
 
 /* Eyebrow heading */
