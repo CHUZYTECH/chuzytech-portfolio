@@ -43,7 +43,7 @@ body {
 .navbar,
 .footer {
   font-family: 'Orbitron', sans-serif;
-  background-color: #122230;
+  background-color: #101626;
 }
 
 .homie {
@@ -115,7 +115,7 @@ body {
 
 .social-icons a {
   /* margin: 0 7px; */
-  color: #FFC107;
+  color: #ffc107;
   font-size: 18px;
   /* Slightly smaller */
   transition: all 0.3s ease;
@@ -623,23 +623,23 @@ body {
 
 .mission-card {
   background: rgba(0, 0, 0, 0.5);
-  border: 0.1px solid #ffc107;
+  border: 0.1px solid #0DCAF0;
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mission-card:hover {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 0 20px #ffc107;
+  box-shadow: 0 0 20px #0DCAF0;
 }
 
 .mission-card i {
-  color: #ffc107;
+  color: #0DCAF0;
   transition: color 0.3s ease;
 }
 
 .mission-card:hover i {
-  color: #aef;
+  color: #0DCAF0;
 }
 
 /* Color at CHUZYTECH */
