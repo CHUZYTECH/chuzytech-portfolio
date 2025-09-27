@@ -2,406 +2,217 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHUZYTECH | PORTFOLIO WEBPAGE</title>
-  <!-- Meta -->
-  <meta name="description"
-    content="Bringing your digital vision to life with expert design, development, and creativity." />
-  <meta name="author" content="Oko Samuel Ogbonnia" />
-  <!-- Fonts and Icons -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap"
-    rel="stylesheet" />
-  <!-- Social Media Icons link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- Orbitron font for Projects -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/style2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
+    <header class="bg-dark">
 
-      <!-- ✅ Add left margin to logo -->
-      <a class="navbar-brand ms-3" href="#">
-        <img src="images/chuzytech_logo.png" alt="CHUZYTECH Logo" style="height: 40px; margin-right: 10px;">
-      </a>
-
-      <!-- ✅ Add right margin to toggler -->
-      <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="toggler-icon">&#9776;</span> <!-- ☰ icon -->
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More</a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
-              <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
-              <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
+        <button type="button" class="toggle" id="toggle"><i class="fa fa-bars"></i></button>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="porfolio.html">PORTFOLIO</a></li>
             </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const navCollapse = document.getElementById('navbarNav');
-      const body = document.body;
-      const togglerIcon = document.querySelector('.toggler-icon');
-
-      navCollapse.addEventListener('shown.bs.collapse', function () {
-        // Push content down
-        const expandedHeight = document.querySelector('.navbar').offsetHeight;
-        document.documentElement.style.setProperty('--navbar-expanded-height', expandedHeight + 'px');
-        body.classList.add('nav-open');
-
-        // Change icon to cancel ✖
-        if (togglerIcon) togglerIcon.innerHTML = '✖';
-      });
-
-      navCollapse.addEventListener('hidden.bs.collapse', function () {
-        body.classList.remove('nav-open');
-
-        // Change icon back to hamburger ☰
-        if (togglerIcon) togglerIcon.innerHTML = '&#9776;';
-      });
-    });
-  </script>
-
-  <!-- Contact Section -->
-  <section class="hero-section m-auto position-relative overflow-hidden">
-    <div
-      class="container d-flex justify-content-center align-items-center min-vh-100 position-relative text-center mt-5">
-
-      <!-- Content Box -->
-      <div class="floating-glass animate__animated animate__fadeInUp mt-4 p-4">
-        <h1 class="fw-bold text-warning mb-3 chux">Explore My Portfolio</h1>
-        <p class="lead fst-italic text-light">
-          Discover my work where creativity meets functionality delivering tailored digital solutions with excellence.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Portfolio Content -->
-  <button class="see-portfolio btn-warning-shine float-end mx-2">
-    See Portfolio
-  </button>
-
-  <style>
-    /* Smaller Premium Warning Button with Golden Hover Shine */
-    .btn-warning-shine {
-      font-size: 0.75rem;
-      /* Slightly smaller text */
-      padding: 0.2rem 0.8rem;
-      /* Smaller padding for compact size */
-      border-radius: 50px;
-      /* Rounded-pill */
-      font-weight: 600;
-      /* Semi-bold */
-      color: #fff;
-      /* White text */
-      background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 193, 7, 0.05));
-      border: 2px solid #ffc107;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      transition: all 0.3s ease, background 0.3s ease;
-    }
-
-    /* Hover Effect */
-    .btn-warning-shine:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(255, 193, 7, 0.45);
-      background: linear-gradient(135deg, rgba(255, 223, 0, 0.25), rgba(255, 193, 7, 0.1));
-    }
-  </style>
-
-  <div class="container m-auto text-light">
-
-    <div class="slide px-2 m-5 mb-4">
-      <h3 class="text-center mb-3 section-title chux">Oko Samuel Ogbonnia</h3>
-
-      <h3 class="text-warning">Software Developer</h3>
-      <h5><em>Over 5 Years of Experience</em></h5>
-
-      <p class>
-        Results-driven Software Developer and Content Writer with over 5 years
-        of experience in creating innovative applications and producing
-        engaging, tech-focused content. Skilled in multiple programming
-        languages and frameworks, delivering high quality software solutions
-        on time. Strong problem-solving abilities, a team player dedicated to
-        continuous learning, and technological advancements. Passionate about
-        crafting well-researched content to share knowledge and insights with
-        diverse audiences.
-      </p>
-
-      <h3 class="text-warning">Skils</h3>
-
-      <ul style="list-style-type: circle;">
-        <li class>Proficiency in programming languages and
-          coding such as
-          HTML, CSS, Javascript, Jquery, Bootsrap5, PHP and
-          Python.</li>
-        <li class>Strong problem-solving skills and ability
-          to debug
-          software issues.</li>
-        <li class>Strong knowledge of database management systems (e.g.,
-          SQL).</li>
-        <li class>Excellent attention to detail and accuracy in data
-          entry.</li>
-        <li class>Ability to work independently and as part of a team.</li>
-        <li class>Good organizational and time-management skills.</li>
-
-        <li class><strong>Content Writing:</strong> Skilled in writing clear,
-          engaging, and informative content for blogs, websites, and
-          tech-related platforms.</li>
-        <li class><strong>SEO Writing:</strong> Ability to create optimized
-          content that improves search engine rankings.</li>
-      </ul>
-
-      <h3 class="text-warning">Experience</h3>
-
-      <h5>Content Writer -<a href="https://techsolutioncrib.com"
-          class="no-underline-link text-info">TechSolutionCrib</a><span class="float-end">2025 - Present</span>
-      </h5>
-      <ul style="list-style-type: circle;">
-        <li>
-          Research and write engaging tech-related articles, tutorials, and
-          reviews.
-        </li>
-
-        <li>
-          Create well-structured, SEO-friendly content to enhance website
-          visibility.
-        </li>
-
-        <li>
-          Collaborate with the team to produce high-quality and informative
-          blog posts.
-        </li>
-      </ul>
-
-      <h5>Junior Frontend Developer:<span class="float-end">2020 -
-          2024</span></h5>
-      <p><em>Aptech Computer Education</em></p>
-
-      <ul style="list-style-type: circle;">
-        <li class>
-          Collaborated with stakeholders to define project
-          requirements, ensuring alignment with business goals
-          user needs.
-        </li>
-        <li class>
-          Developed and launched a customer relationship
-          management system that increased client retention by
-          20%.
-        </li>
-        <li class>
-          Implemented advanced algorithms that optimized system
-          performance, reducing processing time by 30%.
-        </li>
-        <li class>
-          Designed and deployed a mobile application with over
-          50,000 downloads and a 4.8-star user rating.
-        </li>
-        <li class>
-          Conducted code reviews and provided mentorship,
-          enhancing team productivity and code quality.
-        </li>
-        <li class>
-          Designed intuitive user interfaces, boosting customer
-          satisfaction scores by 18%.
-        </li>
-      </ul>
-
-      <h3 class="text-warning">Education</h3>
-
-      <h5>Bachelor’s degree in Software Development</h5>
-      <p class><em>Brigham Young University - Idaho</em></p>
-      <h5>Expected Graduation:<span class="float-end">2026</span></h5>
-      <br>
-
-      <h5>Bachelor’s degree in Computer Science:<span class="float-end">2024</span></h5>
-      <p class><em>Michael Okpara University of Agriculture
-          Umudike Umuahia, Abia state Nigeria</em></p>
-      <br>
-      <h5>PathwayConnect Certificate:<span class="float-end">2024</span></h5>
-      <p class><em>BYU Pathway Worldwide</em></p>
-      <h5 class>Course work in the following:</h5>
-      <ul style="list-style-type: circle;">
-        <li class>Teamwork and collaboration</li>
-
-        <li class>Goals and time management</li>
-
-        <li class>Quantitative reasoning</li>
-
-        <li class>Learning strategies</li>
-
-        <li class>Decision making</li>
-
-        <li class>Leadership</li>
-      </ul>
-
-      <h3 class="text-warning">Academic Project</h3>
-
-      <h5>Barcode-Based Student Attendance Recording System:
-        <span class="float-end">2024</span>
-      </h5>
-
-      <p class><em>Michael Okpara University of Agriculture
-          Umudike Umuahia, Abia state.</em></p>
-
-      <h5 class>Role: Developer</h5>
-      <ul style="list-style-type: circle;">
-        <li class>Developed a system to automate student
-          attendance tracking using barcode technology.</li>
-        <li class>Integrated real-time attendance report.</li>
-        <li class>Design a secure database to manage
-          attendance records.</li>
-      </ul>
-
-    </div>
-  </div>
-
-  <!-- Portfolio Download Section -->
-  <div class="text-center mt-5 mb-5">
-    <a id="downloadBtn" href="documents/oko-samuel-ogbonnia-resume.pdf"
-      class="btn btn-outline-warning btn-lg download-btn" download>
-      <i class="fas fa-file-download me-2"></i>Download CV/Resume
-    </a>
-  </div>
-
-  <!-- Bootstrap Toast -->
-  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
-    <div id="downloadToast" class="toast align-items-center text-bg-success border-0 slide-toast" role="alert"
-      aria-live="assertive" aria-atomic="true">
-      <div class="d-flex">
-        <div class="toast-body">
-          ✅ Download started... please check your device storage.
         </div>
-        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-      </div>
+
+        <div class="logo">
+            <h1 class="logo-color">CHUZY<span class="chuzytech">TECH</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="porfolio.html">PORTFOLIO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid portfolio">
+        <div class="overlay"></div>
+        <div class="container centered-div small mt-3 p-4 text-white">
+            <p class="display-6">Explore Our Portfolio</p>
+            <p class="lead text-center">Discover a showcase of our finest
+                work, where creativity meets functionality. Each project
+                highlights our commitment to excellence and our ability to
+                deliver outstanding digital solutions tailored to our
+                clients' unique needs.</p>
+        </div>
     </div>
-  </div>
 
-  <style>
-    /* Toast Animation */
-    .slide-toast {
-      transform: translateX(100%);
-      opacity: 0;
-      transition: all 0.5s ease-in-out;
-    }
 
-    .toast.show {
-      transform: translateX(0);
-      opacity: 1;
-    }
+    <button class="see-portfolio btn-success mx-5">See
+        Portfolio</button>
 
-    .toast.hide {
-      transform: translateX(100%);
-      opacity: 0;
-    }
+    <div class="container m-auto text-light">
 
-    /* Scalable button styling */
-    .download-btn {
-      font-size: clamp(10px, 2.5vw, 16px);
-      /* text scales 10px → 16px */
-      padding: clamp(4px, 1vw, 12px) clamp(8px, 2vw, 20px);
-      /* padding scales */
-    }
+        <div class="slide px-2 m-3">
+            <h1 class="display-6 text-center"> Oko Samuel Ogbonnia </h1>
+            <h2 class="cd">Software Developer</h2>
+            <h4><em>Over 4 Years of Experience</em></h3>
+                <p class="lead">
 
-    .download-btn i {
-      font-size: clamp(12px, 3vw, 18px);
-      /* icon scales */
-      margin-right: clamp(3px, 1vw, 8px);
-    }
+                    Results-driven Software Developer with 4 years of experience
+                    in creating innovative applications. Skilled in multiple
+                    programming languages and frameworks, delivering
+                    high-quality software solutions on time. Strong
+                    problem-solving abilities and a team player dedicated to
+                    continuous learning and technological advancements.
+                </p>
 
-    /* Responsive button styling */
-    @media (max-width: 576px) {
-      .download-btn {
-        font-size: 12px;
-        /* smaller text */
-        padding: 5px 10px;
-        /* compact padding */
-      }
+                <h2 class="cd">Skils</h3>
 
-      .download-btn i {
-        margin-right: 4px;
-        /* tighter spacing */
-      }
-    }
+                    <ul style="list-style-type: circle;">
 
-    @media (max-width: 320px) {
-      .download-btn {
-        font-size: 10px;
-        /* very small text */
-        padding: 4px 8px;
-        /* very compact button */
-      }
+                        <li class="lead">Proficiency in programming languages and
+                            coding such as
+                            HTML, CSS, Javascript, Boostrap5 and PHP</li>
 
-      .download-btn i {
-        font-size: 12px;
-        /* make icon smaller */
-        margin-right: 3px;
-      }
-    }
-  </style>
+                        <li class="lead">Strong problem-solving skills and ability
+                            to debug
+                            software issues.</li>
 
-  <script>
-    document.getElementById("downloadBtn").addEventListener("click", function () {
-      // Show Bootstrap toast
-      const toastEl = document.getElementById("downloadToast");
-      const toast = new bootstrap.Toast(toastEl, { delay: 5000 });
-      toast.show();
-    });
-  </script>
+                        <li class="lead">Strong knowledge of database management
+                            systems (e.g.,
+                            SQL).</li>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p class="text-center lead">Follow Me</p>
-    <div class="social-icons mb-2">
-      <a href="https://www.facebook.com/ObomeChuzy/" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.linkedin.com/in/oko-samuel-ogbonnia-7a8754265/" target="_blank"><i
-          class="fab fa-linkedin"></i></a>
-      <a href="https://wa.me/+23408061163089" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://x.com/ObomeChuzy" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.instagram.com/ObomeChuzy/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:chuzytech@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-      <a href="https://t.me/ObomeChuzy" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <li class="lead">Excellent attention to detail and accuracy
+                            in data
+                            entry.</li>
+
+                        <li class="lead">Ability to work independently and as part
+                            of a
+                            team.</li>
+
+                        <li class="lead">Good organizational and time-management
+                            skills.</li>
+
+                    </ul>
+
+                    <h2 class="cd">Experience</h3>
+                        <h4><em>Junior Frontend developer</em></h4>
+                        <h5>Aptech Computer Education <span class="float-end lead">2020
+                                - Present</span></h5>
+
+                        <br>
+
+                        <ul style="list-style-type: circle;">
+
+                            <li class="lead">
+                                Collaborated with stakeholders to define project
+                                requirements, ensuring alignment with business goals
+                                user needs.
+                            </li>
+
+                            <li class="lead">
+                                Developed and launched a customer relationship
+                                management system that increased client retention by
+                                20%.
+                            </li>
+
+                            <li class="lead">
+                                Implemented advanced algorithms that optimized system
+                                performance, reducing processing time by 30%.
+                            </li>
+
+                            <li class="lead">
+                                Designed and deployed a mobile application with over
+                                50,000 downloads and a 4.8-star user rating.
+                            </li>
+
+                            <li class="lead">
+                                Conducted code reviews and provided mentorship,
+                                enhancing team productivity and code quality
+                            </li>
+
+                            <li class="lead">
+                                Designed intuitive user interfaces, boosting customer
+                                satisfaction scores by 18%.
+                            </li>
+
+                        </ul>
+
+                        <h2 class="cd">Education</h3>
+
+                            <h4> Bachelor’s degree in Computer Science <span class="float-end lead">2024</span></h4>
+                            <h6 class="lead"><em>Michael Okpara University of Agriculture
+                                    Umudike Umuahia, Abia state.</em></h6>
+
+                            <br>
+
+                            <h4>PathwayConnect Certificate <span class="float-end lead">2024</span></h4>
+                            <h6 class="lead"><em>BYU Pathway Worldwide</em></h6>
+                            <h6 class="lead">Course work in the following:</h6>
+
+                            <ul style="list-style-type: circle;">
+
+                                <li class="lead">Teamwork and collaboration</li>
+
+                                <li class="lead">Goals and time management</li>
+
+                                <li class="lead">Quantitative reasoning</li>
+
+                                <li class="lead">Learning strategies</li>
+
+                                <li class="lead">Decision making</li>
+
+                                <li class="lead">Leadership</li>
+
+                            </ul>
+
+        </div>
     </div>
-    <p>&copy; <span id="year"></span> CHUZYTECH. All rights reserved.</p>
-    <p id="local-date" class="text-center"></p>
-  </footer>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Bootstrap min -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Scripts -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/main2.js"></script>
+    <body class="body"></body>
 
+    <footer class="bg-dark text-light p-2">
+        <div class="container text-center social-icons p-2">
+
+            <!-- Example social media icons linked to their respective profiles -->
+
+            <a href="https://www.facebook.com/ObomeChuzy/" target="_blank"><i class="fab fa-facebook"></i></a>
+
+            <a href="https://www.linkedin.com/in/okosamuelogbonnia/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+            <a href="https://wa.me/+23408061163089" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+            <a href="https://twitter.com/ObomeChuzy" target="_blank"><i class="fab fa-twitter"></i></a>
+
+            <a href="tel:+23408061163089" target="_blank">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+
+            <a href="https://www.instagram.com/ObomeChuzy/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+            <a href="mailto:chuzytech@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+
+            <a href="https://t.me/ObomeChuzy" target="_blank"><i class="fab fa-telegram"></i></a>
+
+            <!-- Add more social media icons as needed -->
+        </div>
+        <div class="container text-center">
+            <p> Copyright &copy; 2024 CHUZYTECH. All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
