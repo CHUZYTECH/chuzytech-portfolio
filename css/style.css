@@ -622,7 +622,7 @@ body {
 }
 
 .mission-card {
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
   border: 0.1px solid #0DCAF0;
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -630,16 +630,16 @@ body {
 
 .mission-card:hover {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 0 20px #0DCAF0;
+  box-shadow: 0 0 20px #0DCAF0 !important;
 }
 
 .mission-card i {
   color: #0DCAF0;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease !important;
 }
 
 .mission-card:hover i {
-  color: #0DCAF0;
+  color: #0DCAF0 !important;
 }
 
 /* Color at CHUZYTECH */
@@ -1137,5 +1137,62 @@ body {
   #downloadBtn:hover {
     transform: scale(1.03) !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+/* Badge Code */
+
+/* ===== Visitor Badge Styling (Glass + Lighter Gradient) ===== */
+.visitor-badge {
+  background: linear-gradient(90deg, rgba(102, 178, 255, 0.6), rgba(179, 153, 255, 0.6));
+  /* lighter glass gradient */
+  backdrop-filter: blur(8px);
+  /* glass blur */
+  -webkit-backdrop-filter: blur(8px);
+  /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* subtle border */
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 50px;
+  /* pill shape */
+  animation: pulseGlow 3s infinite ease-in-out;
+  color: #fff;
+  /* keep text clear */
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(102, 178, 255, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 12px rgba(179, 153, 255, 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(102, 178, 255, 0.5);
+  }
+}
+
+/* Cookie Buttons Glow on Hover */
+#acceptCookies:hover {
+  box-shadow: 0 0 10px rgba(25, 135, 84, 0.9);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+#declineCookies:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 480px) {
+  .visitor-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
   }
 }
