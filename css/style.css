@@ -331,7 +331,7 @@ body {
   /* Min ~14px → Max ~16px */
 }
 
-.hero-section p {
+.hero-section p { 
   font-size: clamp(0.875rem, 1.2vw + 0.25rem, 1.125rem) !important;
   /* Min ~14px → Max ~18px */
 }
