@@ -184,5 +184,23 @@
     "title": "TECHSOLUTIONCRIB T-SHIRT",
     "alt": "TECHSOLUTIONCRIB T-SHIRT",
     "category": "Branding"
+  },
+  {
+    "image": "images/eagle-eye-entertainment.jpg",
+    "title": "EAGLE EYE ENTERTAINMENT",
+    "alt": "EAGLE EYE ENTERTAINMENT",
+    "category": "Branding"
+  },
+  {
+    "image": "images/king-joe.jpg",
+    "title": "KING JOE LAUNDARY SERVICES",
+    "alt": "KING JOE LAUNDARY SERVICES",
+    "category": "Branding"
+  },
+  {
+    "image": "images/eagle-eye-records.jpg",
+    "title": "EAGLE EYE RECORDS",
+    "alt": "EAGLE EYE RECORDS",
+    "category": "Branding"
   }
 ]
